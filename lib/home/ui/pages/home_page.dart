@@ -9,13 +9,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BlocBuilder<CounterCubit, int>(
+        body: BlocBuilder<CounterCubit, CounterState>(
           builder: (context, state) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CountLabel(
-                  count: "$state",
+                  count: "${state.count}",
                 ),
                 CountActionBar()
               ],

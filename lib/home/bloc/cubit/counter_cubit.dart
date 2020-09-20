@@ -1,15 +1,22 @@
 import 'package:bloc/bloc.dart';
 
-class CounterCubit extends Cubit<int> {
+class CounterState {
+  final int count;
+
+  CounterState(this.count);
+
+}
+
+class CounterCubit extends Cubit<CounterState> {
   
-  CounterCubit() : super(0);
+  CounterCubit() : super(CounterState(0));
 
   void increment() {
-    emit(state + 1);
+    emit(CounterState(state.count + 1));
   }
 
   void decrement() {
-    emit(state - 1);
+    emit(CounterState(state.count - 1));
   }
 
 }

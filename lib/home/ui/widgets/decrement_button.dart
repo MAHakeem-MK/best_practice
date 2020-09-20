@@ -10,7 +10,7 @@ class DecrementButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CounterCubit, int>(
+    return BlocBuilder<CounterCubit, CounterState>(
       builder: (context, state) {
         return CountActionButton(
           child: Icon(Icons.arrow_downward),
