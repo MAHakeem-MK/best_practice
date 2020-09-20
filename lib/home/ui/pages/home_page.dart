@@ -1,4 +1,4 @@
-import 'package:best_approach/home/bloc/cubit/counter_cubit.dart';
+import 'package:best_approach/home/cubit/counter_cubit.dart';
 import 'package:best_approach/home/ui/widgets/count_actionbar.dart';
 import 'package:best_approach/home/ui/widgets/count_label.dart';
 import 'package:flutter/material.dart';
