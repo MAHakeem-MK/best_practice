@@ -6,11 +6,17 @@ class CountLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      '${this.count}',
-      style: TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold,
+    var displayHeight = MediaQuery.of(context).size.height;
+    return SizedBox(
+      height: displayHeight * 0.5,
+      child: Center(
+        child: Text(
+          '${this.count}',
+          style: TextStyle(
+            fontSize: displayHeight * 0.5,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }

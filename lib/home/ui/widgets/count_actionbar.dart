@@ -8,10 +8,15 @@ class CountActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children:[
-      CountActionButton(),
-      CountActionButton(),
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+      CountActionButton(
+        child: Icon(Icons.arrow_downward),
+        onPressed: () {},
+      ),
+      CountActionButton(
+        child: Icon(Icons.arrow_upward),
+        onPressed: () {},
+      ),
     ]);
   }
 }
-
