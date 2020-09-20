@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CountLabel extends StatelessWidget {
-  final int count;
+  final String count;
   const CountLabel({Key key, this.count}) : super(key: key);
 
   @override
