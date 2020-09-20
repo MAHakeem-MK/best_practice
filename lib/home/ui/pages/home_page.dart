@@ -9,7 +9,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BlocBuilder<CounterCubit, CounterState>(
+        body: BlocConsumer<CounterCubit, CounterState>(
+          listener: (context, state) {
+            if (state is CanNotDecrement) {
+              Scaffold.of(context).showSnackBar(SnackBar(
+                content: Text('Can not decrement!'),
+                backgroundColor: Colors.red,
+              ));
+            }
+          },
           builder: (context, state) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

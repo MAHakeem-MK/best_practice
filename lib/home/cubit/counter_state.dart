@@ -17,3 +17,7 @@ class Incremented extends CounterState {
 class Decremented extends CounterState {
   Decremented(int count) : super(count);
 }
+
+class CanNotDecrement extends CounterState {
+  CanNotDecrement(int count) : super(count);
+}
