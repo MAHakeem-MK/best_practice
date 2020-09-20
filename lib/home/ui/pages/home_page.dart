@@ -1,6 +1,8 @@
 import 'package:best_approach/home/cubit/counter_cubit.dart';
 import 'package:best_approach/home/ui/widgets/count_actionbar.dart';
 import 'package:best_approach/home/ui/widgets/count_label.dart';
+import 'package:best_approach/home/ui/widgets/raised_round_button.dart';
+import 'package:best_approach/home/ui/widgets/reset_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,6 +24,7 @@ class HomePage extends StatelessWidget {
             return Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                ResetButton(),
                 CountLabel(
                   count: "${state.count}",
                 ),
@@ -34,3 +37,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+

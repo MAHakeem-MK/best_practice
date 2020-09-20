@@ -17,4 +17,9 @@ class CounterCubit extends Cubit<CounterState> {
       emit(CanNotDecrement(state.count));
     }
   }
+
+  void reset() {
+    emit(Resetted(0));
+  }
+
 }

@@ -3,8 +3,8 @@ import 'package:best_approach/home/ui/widgets/raised_round_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class DecrementButton extends StatelessWidget {
-  const DecrementButton({
+class ResetButton extends StatelessWidget {
+  const ResetButton({
     Key key,
   }) : super(key: key);
 
@@ -13,9 +13,9 @@ class DecrementButton extends StatelessWidget {
     return BlocBuilder<CounterCubit, CounterState>(
       builder: (context, state) {
         return RaisedRoundButton(
-          child: Icon(Icons.arrow_downward),
+          child: Icon(Icons.rotate_left),
           onPressed: () {
-            context.bloc<CounterCubit>().decrement();
+            context.bloc<CounterCubit>().reset();
           },
         );
       },

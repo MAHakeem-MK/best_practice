@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CountActionButton extends StatelessWidget {
+class RaisedRoundButton extends StatelessWidget {
   final Widget child;
   final Function onPressed;
 
-  const CountActionButton(
+  const RaisedRoundButton(
       {Key key, @required this.child, @required this.onPressed})
       : super(key: key);
 

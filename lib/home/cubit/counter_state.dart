@@ -18,6 +18,10 @@ class Decremented extends CounterState {
   Decremented(int count) : super(count);
 }
 
+class Resetted extends CounterState {
+  Resetted(int count) : super(count);
+}
+
 class CanNotDecrement extends CounterState {
   CanNotDecrement(int count) : super(count);
 }
